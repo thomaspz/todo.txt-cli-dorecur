@@ -28,6 +28,16 @@ import sys
 
 def add_new_task(line):
     """Add a new task by running todo-txt *add*."""
+
+    value = get_key_value(line,'rec-depri')
+    if value is not None:
+        print ("New Task should be depriorized")
+        z = re.match("^\([A-Za-z]\)",line)
+        if z:
+            print ("Priority found. Remove")
+            line = line[4:]
+            #print ("New Line:", line)
+
     subprocess.run(
         [os.environ['TODO_FULL_SH'], 'command', 'add', line],
         check=True,
