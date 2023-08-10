@@ -20,6 +20,8 @@ Keys (tags) used by this action
 - The ``due:`` date, if it exists, is incremented as specified by the
   ``rec:`` value.
 
+- The ``rec-depri:true`` , if it exist, removes existing Priority from Task. The value could be anything
+
 ----------------
 Recurrence types
 ----------------
